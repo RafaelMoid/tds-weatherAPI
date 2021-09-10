@@ -1,9 +1,9 @@
-.Ul li {
+li{
     font-size: 10px;
     width: calc(100% / 4);
     margin-bottom: -200px;
     position: relative;
-    
+    color: black;
   }
 
 
@@ -15,12 +15,12 @@
   display: inline-block;
   height: 0px;
   text-align: center;
-  color: white;
+  color: black;
   margin-bottom: 20px;
 }
 
 h3{
-  color: #fff;
+  color: black;
 }
 
 
@@ -33,5 +33,5 @@ h3{
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: black;
 }

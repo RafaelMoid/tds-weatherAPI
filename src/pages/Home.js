@@ -4,10 +4,7 @@ import styled from 'styled-components';
 import {Route, Link, Switch} from 'react-router-dom';
 import NavBar from './NavBar';
 
-const WW = styled.img `
-width: 80px;
-height: 80px;
-`
+
 
 const Title = styled.h3 `
 height: 0px;
@@ -29,7 +26,7 @@ function Home() {
             
       <Title>WEATHER</Title>
       <SubTitle>select a city</SubTitle>
-      <WW className="WW" src="tds-wheatherapi/public/img/worldwidewhite.png" ></WW>
+      <input type="image" src="./public/img/worldwidewhite.png" />
       <NavBar />
 
     </header>
