@@ -10,8 +10,8 @@ function NavBar(){
             <li><Link to='/recife'>recife</Link></li>
             <li><Link to='/vancouver'>vancouver</Link></li>
             <li><Link to='/yakutsk'>yakutsk</Link></li>
-            <li><Link to='/'>Home</Link></li>
         </ul>
+        
     );
 }
 

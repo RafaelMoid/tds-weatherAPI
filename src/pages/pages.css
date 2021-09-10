@@ -1,0 +1,13 @@
+.Ul li {
+    font-size: 10px;
+    width: calc(100% / 4);
+  }
+
+  .btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: transparent; 
+            width: 20px;   
+            height: 20px;   
+}
