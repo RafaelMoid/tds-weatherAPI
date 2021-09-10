@@ -7,12 +7,14 @@ import Recife from './pages/Recife(BR).js';
 import Vancouver from './pages/Vancouver(CA)';
 import Yakutsk from './pages/Yakutsk(RU)';
 import {Route, Link} from 'react-router-dom';
+import NavBar from './NavBar';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <h1>Welcome to Rafael's weather API service</h1>
+        <NavBar />
         <Route exact path="/dallol" component={Dallol} />
         <Route exact path="/fairbanks" component={Fairbanks} />
         <Route exact path="/londres" component={Londres} />
