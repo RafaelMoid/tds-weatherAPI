@@ -1,5 +1,9 @@
 import React,{Fragment} from "react";
-import axios from "axios";
+import styled from 'styled-components';
+
+const WeatherLogo =styled.img`
+
+`
 
 function Dallol(){
     return(
