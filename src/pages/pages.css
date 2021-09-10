@@ -1,13 +1,37 @@
 .Ul li {
     font-size: 10px;
     width: calc(100% / 4);
+    margin-bottom: -200px;
+    position: relative;
+    
   }
 
-  .btn {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    background-color: transparent; 
-            width: 20px;   
-            height: 20px;   
+
+.Values li {
+    font-size:14px;
+    position: relative;
+    width: calc(100% / 4);
+  list-style: none;
+  display: inline-block;
+  height: 0px;
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+}
+
+h3{
+  color: #fff;
+}
+
+
+
+.App-header {
+  background-color: #27292e;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
 }

@@ -1,16 +1,14 @@
-import React,{Fragment} from "react";
+import React,{Fragment, useState} from "react";
 import styled from 'styled-components';
 import {Route} from 'react-router-dom'
 import "./pages.css";
 
 
-export const WeatherInfoIcons = {
-    sunset: "./tds-weatherapi/public/icons/temp.svg",
-    sunrise: "./tds-weatherapi/public/icons/temp.svg",
-    humidity: "./tds-weatherapi/public/icons/humidity.svg",
-    wind: "./tds-weatherapi/public/icons/wind.svg",
-    pressure: "./tds-weatherapi/public/icons/pressure.svg",
-}
+
+const api = {
+    key:"3abe62ea41f7078ad65d4e59cf05bcfc",
+    base:"https://api.openweathermap.org/data/2.5/",
+};
 
 const WeatherLogo =styled.img`
 width: 140px;
@@ -75,19 +73,15 @@ const InfoIcon = styled.img`
   height: 36px;
 `
 
-const WeatherInfoComponent = () => {
-    return (
-        <InfoContainer>
-            <InfoIcon>
-                <InfoLabel>
 
-                </InfoLabel>
-            </InfoIcon>
-        </InfoContainer>
-    );
-}
 
 function Dallol(){
+
+    const [query, setQuery] = useState('');
+    const [weather, setWeather] = useState({});
+
+    const search = evt => { return}
+
     return(
         <Fragment>
             
@@ -106,14 +100,40 @@ function Dallol(){
                     <li>morning</li>                    
                     <li>night</li>
                 </ul>
+                <ul className="Img">
+                    <li>-8°C</li>
+                    <li>-5°C</li>
+                    <li>-2°C</li>
+                    <li>-7°C</li>
+                </ul>
+                <ul className="Values">
+                    <li>-8°C</li>
+                    <li>-5°C</li>
+                    <li>-2°C</li>
+                    <li>-7°C</li>
+                </ul>
+                
                 <ul className="Ul">
                     <li>wind speed</li>
                     <li>sunrise</li>
                     <li>sunset</li>
                     <li>humidity</li>
                 </ul>
+                <ul className="Img">
+                    <li>-8°C</li>
+                    <li>-5°C</li>
+                    <li>-2°C</li>
+                    <li>-7°C</li>
+                </ul>
+                <ul className="Values">
+                    <li>5,1m/s</li>
+                    <li>5:14am</li>
+                    <li>7:25PM</li>
+                    <li>52%</li>
+                </ul>
+                
                 <button className="btn" >
-                <input type="image" src="./public/img/arrow.png" />
+                <input type="image" src="./public/icons/pressure.svg" />
                 </button>  
             
         </Fragment>
