@@ -45,9 +45,9 @@ li {
   list-style: none;
   display: inline-block;
   width: calc(100% / 3);
-  height: 120px;
+  height: 0px;
   text-align: center;
-  color: white;
+  color: black;
 }
 
 a:visited {

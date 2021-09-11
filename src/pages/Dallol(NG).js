@@ -5,11 +5,16 @@ import "./pages.css";
 
 
 const api = {
-    key:"3abe62ea41f7078ad65d4e59cf05bcfc",
+    key:"",
     base:"https://api.openweathermap.org/data/2.5/",
 };
 
-
+const images = [
+    { id: 1, src: './tds-weatherapi/public/icons/', title: 'foo', description: 'bar' },
+    { id: 2, src: './assets/image02.jpg', title: 'foo', description: 'bar' },
+    { id: 3, src: './assets/image03.jpg', title: 'foo', description: 'bar' },
+    { id: 4, src: './assets/image04.jpg', title: 'foo', description: 'bar' },
+    { id: 5, src: './assets/image05.jpg', title: 'foo', description: 'bar' }];
 
 
 
@@ -23,9 +28,9 @@ function Dallol(){
     return(
         <Fragment>
             
-                <h3 className="title">Dallol,NG</h3>
+                <h3 className="title">DALLOL</h3>
                 <br/>
-                <p className="subTitle">clima atual</p>
+                <p className="subTitle">snowy</p>
                     <div>
                         <h1 className="temp">-2</h1>
                         <h3 className="celcius">°C</h3>
@@ -33,17 +38,12 @@ function Dallol(){
                     </div>
                 <image src="/icons/perfect-day.svg"/>
                 <ul className="Ul">
-                    <li>afternoon</li>
-                    <li>dawn</li>
-                    <li>morning</li>                    
-                    <li>night</li>
+                    <li>afternoon <br/><br/> <image src="/icons/afternoon.svg"/> </li>
+                    <li>dawn <br/><br/>  </li>
+                    <li>morning <br/><br/>  </li>                    
+                    <li>night <br/><br/>  </li>
                 </ul>
-                <ul className="Img">
-                    <li>-8°C</li>
-                    <li>-5°C</li>
-                    <li>-2°C</li>
-                    <li>-7°C</li>
-                </ul>
+                
                 <ul className="Values">
                     <li>-8°C</li>
                     <li>-5°C</li>
@@ -52,17 +52,12 @@ function Dallol(){
                 </ul>
                 
                 <ul className="Ul">
-                    <li>wind speed</li>
-                    <li>sunrise</li>
-                    <li>sunset</li>
-                    <li>humidity</li>
+                    <li>wind speed <br/><br/>  </li>
+                    <li>sunrise <br/><br/>  </li>
+                    <li>sunset <br/><br/>  </li>
+                    <li>humidity <br/><br/>  </li>
                 </ul>
-                <ul className="Img">
-                    <li>-8°C</li>
-                    <li>-5°C</li>
-                    <li>-2°C</li>
-                    <li>-7°C</li>
-                </ul>
+                
                 <ul className="Values">
                     <li>5,1m/s</li>
                     <li>5:14am</li>

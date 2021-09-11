@@ -1,13 +1,9 @@
-li{
-    font-size: 10px;
-    width: calc(100% / 4);
-    margin-bottom: -200px;
-    position: relative;
-    color: black;
-  }
+
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@100&display=swap');
 
 
-.Values li {
+
+.Ul li {
     font-size:14px;
     position: relative;
     width: calc(100% / 4);
@@ -15,15 +11,49 @@ li{
   display: inline-block;
   height: 0px;
   text-align: center;
+  color: black;  
+  font-family:Urbanist;
+}
+.title {
+  font-size:50px;
   color: black;
-  margin-bottom: 20px;
+  margin-bottom:-60px;  
+  font-family:Urbanist;
 }
 
-h3{
-  color: black;
+.temp {
+  font-size:90px;
+  font-family:Urbanist;
+  align-items: center;
+  margin-right: 40px;
 }
 
+.celcius {
+  font-size:20px;
+  font-family:Urbanist;
+  top: -150px;
+  left: 40px;
+  position: relative;
+}
 
+.subTitle{
+  font-size:30px;  
+  font-family:Urbanist;
+  margin-bottom:-70px;
+}
+
+.Values li{
+  font-size:16px;
+  position: relative;
+  width: calc(100% / 4);
+  list-style: none;
+  display: inline-block;
+  height: 0px;
+  text-align: center;
+  color: black;  
+  font-family:Urbanist;
+  font-weight: bold;
+}
 
 .App-header {
   background-color: #27292e;
