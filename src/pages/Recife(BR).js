@@ -1,96 +1,50 @@
 import React,{Fragment, useState} from "react";
-import styled from 'styled-components';
 import {Route} from 'react-router-dom'
 import "./pages.css";
 
 
-export const WeatherInfoIcons = {
-    sunset: "./tds-weatherapi/public/icons/temp.svg",
-    sunrise: "./tds-weatherapi/public/icons/temp.svg",
-    humidity: "./tds-weatherapi/public/icons/humidity.svg",
-    wind: "./tds-weatherapi/public/icons/wind.svg",
-    pressure: "./tds-weatherapi/public/icons/pressure.svg",
-}
 
-const WeatherLogo =styled.img`
-width: 140px;
-height: 140px;
-margin: -10px auto;
+const api = {
+    key:"",
+    base:"https://api.openweathermap.org/data/2.5/",
+};
 
-`
-
-const Title = styled.h3 `
-height: 0px;
-margin-bottom: -20px;
-`
-
-const SubTitle = styled.p `
-width: 350px;
-height: 0px;
-font-size: 20px;
-text-align: center;
-align-items: center;
-margin-bottom: 0px;
-`
-const Temp = styled.div `
-display: flex;
-flex-direction:row;
-align-items: center;
-`
-
-const Condition = styled.span `
-width: 140px;
-height: 140px;
-margin: 0px;
-font-size: 100px;
-margin-left: 90px;
-margin-right: -20px;
-`
-const ConditionFontSize = styled.span `
-font-size: 20px;
-margin-bottom: 50px;
-`
+//Popular esse array com as imagens da pasta Images
+const images = [
+    { id: 1, src: './tds-weatherapi/public/icons/', title: 'foo', description: 'bar' },
+    { id: 2, src: './assets/image02.jpg', title: 'foo', description: 'bar' },
+    { id: 3, src: './assets/image03.jpg', title: 'foo', description: 'bar' },
+    { id: 4, src: './assets/image04.jpg', title: 'foo', description: 'bar' },
+    { id: 5, src: './assets/image05.jpg', title: 'foo', description: 'bar' }];
 
 
-async function fetchAsync () {
-    // await response of fetch call
-    let response = await fetch('https://api.github.https://samples.openweathermap.org/data/2.5/forecast?id=2318534&appid=3abe62ea41f7078ad65d4e59cf05bcfc');
-    // only proceed once promise is resolved
-    let data = await response.json();
-    // only proceed once second promise is resolved
-    return data;
-
-  }
-  
-  // trigger async function
-  // log response or catch error of fetch promise
-  fetchAsync()
-      .then(data => console.log(data))
-      .catch(reason => console.log(reason.message))
 
 function Recife(){
 
+    const [query, setQuery] = useState('');
+    const [weather, setWeather] = useState({});
 
+    const search = evt => { return}
 
     return(
         <Fragment>
             
-                <Title className="title">Londres,BR</Title>
+                <h3 className="title">RECIFE</h3>
                 <br/>
-                <SubTitle>clima atual</SubTitle>
-                    <Temp>
-                        <Condition>-2</Condition>
-                        <ConditionFontSize>°C</ConditionFontSize>
+                <p className="subTitle">sunny</p>
+                    <div>
+                        <h1 className="temp">28</h1>
+                        <h3 className="celcius">°C</h3>
                         
-                    </Temp>
-                <WeatherLogo src="/icons/perfect-day.svg"/>
+                    </div>
+                <image src="/icons/perfect-day.svg"/>
                 <ul className="Ul">
-                    <li>afternoon</li>
-                    <li>dawn</li>
-                    <li>morning</li>                    
-                    <li>night</li>
+                    <li>afternoon <br/><br/> <image src="/icons/afternoon.svg"/> </li>
+                    <li>dawn <br/><br/>  </li>
+                    <li>morning <br/><br/>  </li>                    
+                    <li>night <br/><br/>  </li>
                 </ul>
-            
+                
                 <ul className="Values">
                     <li>-8°C</li>
                     <li>-5°C</li>
@@ -104,13 +58,15 @@ function Recife(){
                     <li>sunset</li>
                     <li>humidity</li>
                 </ul>
+                
                 <ul className="Values">
                     <li>5,1m/s</li>
                     <li>5:14am</li>
                     <li>7:25PM</li>
                     <li>52%</li>
                 </ul>
-                            
+               
+            
         </Fragment>
     );
 }

@@ -1,7 +1,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@100&display=swap');
 
-
+a:visited{
+  text-decoration: none;
+}
 
 .Ul li {
     font-size:14px;
@@ -14,11 +16,18 @@
   color: black;  
   font-family:Urbanist;
 }
+
+
 .title {
   font-size:50px;
   color: black;
   margin-bottom:-60px;  
   font-family:Urbanist;
+}
+
+.Icon{
+  height:20px;
+  width: 20px;
 }
 
 .temp {
@@ -54,6 +63,8 @@
   font-family:Urbanist;
   font-weight: bold;
 }
+
+
 
 .App-header {
   background-color: #27292e;

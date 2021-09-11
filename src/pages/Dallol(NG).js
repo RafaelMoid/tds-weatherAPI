@@ -9,6 +9,7 @@ const api = {
     base:"https://api.openweathermap.org/data/2.5/",
 };
 
+//Popular esse array com as imagens da pasta Images
 const images = [
     { id: 1, src: './tds-weatherapi/public/icons/', title: 'foo', description: 'bar' },
     { id: 2, src: './assets/image02.jpg', title: 'foo', description: 'bar' },
@@ -52,10 +53,10 @@ function Dallol(){
                 </ul>
                 
                 <ul className="Ul">
-                    <li>wind speed <br/><br/>  </li>
-                    <li>sunrise <br/><br/>  </li>
-                    <li>sunset <br/><br/>  </li>
-                    <li>humidity <br/><br/>  </li>
+                    <li>wind speed</li>
+                    <li>sunrise</li>
+                    <li>sunset</li>
+                    <li>humidity</li>
                 </ul>
                 
                 <ul className="Values">
