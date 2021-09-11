@@ -26,7 +26,7 @@ function Home() {
             
       <Title>WEATHER</Title>
       <SubTitle>select a city</SubTitle>
-      <input type="image" src="./src/images/worldwidewhite.png" />
+      <input type="image" src="" />
       <NavBar />
 
     </header>

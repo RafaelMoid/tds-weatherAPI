@@ -35,8 +35,9 @@ function Dallol(){
                     <div>
                         <h1 className="temp">-2</h1>
                         <h3 className="celcius">°C</h3>
-                        
+                         
                     </div>
+                    <img className="climaImg" src="/images/sunny.svg" />
                 <image src="/icons/perfect-day.svg"/>
                 <ul className="Ul">
                     <li>afternoon <br/><br/> <image src="/icons/afternoon.svg"/> </li>
@@ -65,7 +66,8 @@ function Dallol(){
                     <li>7:25PM</li>
                     <li>52%</li>
                 </ul>
-               
+
+             
             
         </Fragment>
     );

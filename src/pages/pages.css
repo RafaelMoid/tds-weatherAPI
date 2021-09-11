@@ -5,6 +5,13 @@ a:visited{
   text-decoration: none;
 }
 
+.climaImg {
+  width: 25%;
+  height: 25%;
+  margin-top: -100px;
+  margin-bottom: -50px;
+}
+
 .Ul li {
     font-size:14px;
     position: relative;
