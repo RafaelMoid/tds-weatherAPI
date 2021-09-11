@@ -37,7 +37,7 @@ function Yakutsk(){
                         <h3 className="celcius">°C</h3>
                         
                     </div>
-                <image src="/icons/perfect-day.svg"/>
+                    <img className="climaImg" src="/images/sunny.svg" />
                 <ul className="Ul">
                     <li>afternoon <br/><br/> <image src="/icons/afternoon.svg"/> </li>
                     <li>dawn <br/><br/>  </li>
