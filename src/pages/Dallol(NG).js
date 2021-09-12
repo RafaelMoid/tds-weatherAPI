@@ -1,14 +1,12 @@
-import React,{Fragment, useState} from "react";
+import React,{Fragment, useState, useEffect} from "react";
 import {Route, Link} from 'react-router-dom'
 import "./pages.css";
 import styled from "styled-components";
+import {getWeatherData} from "../weatherapi.js";
 
 
 
-const api = {
-    key:"",
-    base:"https://api.openweathermap.org/data/2.5/",
-};
+
 
 //Popular esse array com as imagens da pasta Images
 const images = [
@@ -21,6 +19,7 @@ const images = [
 const ReturnBtn = styled.button `
 height: 20%;
 max-width: 100px;
+max-height: 100px;
 width: 20%;
 color: black;
 background-color:transparent;
@@ -29,36 +28,65 @@ top: 0;
 left: 5%;
 position: absolute;
 background: transparent;
-    border: none !important;
-    font-size:0;
+border: none !important;
+font-size:0;
 `
 
+
+
+
+
 function Dallol(){
+    
+    const[weatherdata,setWeatherData] = useState(null);
+    const [loading, setLoading] = useState(false);
+    const CITY = "Dallol";
+    const MINUTES_TO_INTERVAL = 1
+    const INTERVAL = MINUTES_TO_INTERVAL * 60 * 1000
+    
+    const getData = async () => {
+        try{
+            const {data} = await getWeatherData(CITY);
+            console.log(data)
+            setWeatherData(data)
+            // console.log(data.weather)
+            // console.log(data.weather[0].main)
+            // console.log(data.name)
+        }catch(error){
+            console.log(error.message);
+        }
+    }
+    
+    useEffect(() => {
+        getData();
+        setInterval(() => {
+            getData();
+        }, INTERVAL);
+    }, []);
 
-    const [query, setQuery] = useState('');
-    const [weather, setWeather] = useState({});
-
-    const search = evt => { return}
 
     return(
         <Fragment>
                 
+                
+
                 <ReturnBtn>
                 <Link className="ReturnBtn" to='/'><img className="climaImg" src="/images/arrowBlack.png" /></Link>
                 </ReturnBtn>
 
                 <h3 className="title"> DALLOL</h3>
                 <br/>
-                <p className="subTitle">snowy</p>
+                <p className="subTitle">{weatherdata?.weather[0].main}</p>
                     <div>
-                        <h1 className="temp">-2</h1>
+                        <h1 className="temp">{parseFloat(weatherdata?.main.temp - 273.15).toFixed(0)}</h1>
                         <h3 className="celcius">°C</h3>
                          
                     </div>
                     <img className="climaImg" src="/images/sunny.svg" />
-                <image src="/icons/perfect-day.svg"/>
+                <img src="/icons/perfect-day.svg"/>
                 <ul className="Ul">
-                    <li>afternoon <br/><br/> <image src="/icons/afternoon.svg"/> </li>
+                    <li>afternoon <br/><br/> 
+                    <img src="/images/afternoon.svg"/> </li>
                     <li>dawn <br/><br/>  </li>
                     <li>morning <br/><br/>  </li>                    
                     <li>night <br/><br/>  </li>

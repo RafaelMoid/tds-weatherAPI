@@ -21,6 +21,7 @@ const images = [
     const ReturnBtn = styled.button `
     height: 20%;
     max-width: 100px;
+    max-height: 100px;
     width: 20%;
     color: black;
     background-color:transparent;
@@ -58,7 +59,8 @@ function London(){
                     
                     <img className="climaImg" src="/images/perfect-day.svg" />
                 <ul className="Ul">
-                    <li>afternoon <br/><br/> <image src="/icons/afternoon.svg"/> </li>
+                    <li>afternoon <br/><br/>
+                     <img src="/icons/afternoon.svg"/> </li>
                     <li>dawn <br/><br/>  </li>
                     <li>morning <br/><br/>  </li>                    
                     <li>night <br/><br/>  </li>

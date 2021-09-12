@@ -8,20 +8,27 @@ import NavBar from './NavBar';
 
 const Title = styled.h3 `
 height: 0px;
+font-size: 40px;  
+font-family:Urbanist;
+top: 20px;
+position: relative;
 `
 
 const SubTitle = styled.p `
 width: 140px;
 height: 30px;
-font-size: 20px;
+font-size: 25px; 
+font-family:Urbanist;
+position: relative;
 `
 
 const CLimaImg = styled.img `
 
-margin-top: -10px;
+margin-top: 0px;
 margin-bottom: 40px;
-max-height: 150px;
-max-width: 150px;
+max-height: 120px;
+max-width: 120px;
+position: relative;
 `
 
 function Home() {
