@@ -16,6 +16,13 @@ height: 30px;
 font-size: 20px;
 `
 
+const CLimaImg = styled.img `
+
+margin-top: -10px;
+margin-bottom: 40px;
+max-height: 150px;
+max-width: 150px;
+`
 
 function Home() {
     return (
@@ -26,7 +33,7 @@ function Home() {
             
       <Title>WEATHER</Title>
       <SubTitle>select a city</SubTitle>
-      <input type="image" src="" />
+      <CLimaImg className="climaImg" src="/images/worldwidewhite.png" />
       <NavBar />
 
     </header>

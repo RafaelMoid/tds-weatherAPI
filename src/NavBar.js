@@ -11,10 +11,9 @@ function NavBar(){
             <li className="Links"><Link to='/londres'>londres</Link></li>
             <li className="Links"><Link to='/recife'>recife</Link></li>
             <li className="Links"><Link to='/vancouver'>vancouver</Link></li>
-            <li className="Links"><Link to='/yakutsk'>yakutsk</Link></li>
-            
+            <li className="Links"><Link to='/yakutsk'>yakutsk</Link></li>    
         </ul>
-        
+            
     );
 }
 

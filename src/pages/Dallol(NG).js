@@ -1,6 +1,7 @@
 import React,{Fragment, useState} from "react";
-import {Route} from 'react-router-dom'
+import {Route, Link} from 'react-router-dom'
 import "./pages.css";
+import styled from "styled-components";
 
 
 
@@ -17,7 +18,20 @@ const images = [
     { id: 4, src: './assets/image04.jpg', title: 'foo', description: 'bar' },
     { id: 5, src: './assets/image05.jpg', title: 'foo', description: 'bar' }];
 
-
+const ReturnBtn = styled.button `
+height: 20%;
+max-width: 100px;
+width: 20%;
+color: black;
+background-color:transparent;
+border-radius: 0px;
+top: 0;
+left: 5%;
+position: absolute;
+background: transparent;
+    border: none !important;
+    font-size:0;
+`
 
 function Dallol(){
 
@@ -28,8 +42,12 @@ function Dallol(){
 
     return(
         <Fragment>
-            
-                <h3 className="title">DALLOL</h3>
+                
+                <ReturnBtn>
+                <Link className="ReturnBtn" to='/'><img className="climaImg" src="/images/arrowBlack.png" /></Link>
+                </ReturnBtn>
+
+                <h3 className="title"> DALLOL</h3>
                 <br/>
                 <p className="subTitle">snowy</p>
                     <div>
@@ -67,8 +85,7 @@ function Dallol(){
                     <li>52%</li>
                 </ul>
 
-             
-            
+                
         </Fragment>
     );
 }

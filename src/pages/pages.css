@@ -5,10 +5,21 @@ a:visited{
   text-decoration: none;
 }
 
+.btnHome {
+  height: 5%;
+  width: 5%;
+  left: 0;
+  top: 0;
+}
+
+
+
 .climaImg {
   width: 25%;
   height: 25%;
   margin-top: -100px;
+  max-height: 150px;
+  max-width: 150px;
 }
 
 .Ul li {
@@ -21,6 +32,8 @@ a:visited{
   text-align: center;
   color: black;  
   font-family:Urbanist;
+  max-height: 80%;
+ max-width: 80%;
 }
 
 
