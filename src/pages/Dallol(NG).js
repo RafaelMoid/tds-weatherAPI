@@ -82,8 +82,8 @@ function Dallol(){
                         <h3 className="celcius">°C</h3>
                          
                     </div>
-                    <img className="climaImg" src="/images/sunny.svg" />
-                <img src="/icons/perfect-day.svg"/>
+                    <img className="climaImg" src={`http://openweathermap.org/img/w/${weatherdata?.weather[0].icon}.png`} alt="imgicon" />
+                
                 <ul className="Ul">
                     <li>afternoon <br/><br/> 
                     <img src="/images/afternoon.svg"/> </li>
