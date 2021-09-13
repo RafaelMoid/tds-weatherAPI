@@ -9,12 +9,7 @@ import {getWeatherData} from "../weatherapi.js";
 
 
 //Popular esse array com as imagens da pasta Images
-const images = [
-    { id: 1, src: './tds-weatherapi/public/icons/', title: 'foo', description: 'bar' },
-    { id: 2, src: './assets/image02.jpg', title: 'foo', description: 'bar' },
-    { id: 3, src: './assets/image03.jpg', title: 'foo', description: 'bar' },
-    { id: 4, src: './assets/image04.jpg', title: 'foo', description: 'bar' },
-    { id: 5, src: './assets/image05.jpg', title: 'foo', description: 'bar' }];
+const images = [];
 
 const ReturnBtn = styled.button `
 height: 20%;
@@ -86,10 +81,13 @@ function Dallol(){
                 
                 <ul className="Ul">
                     <li>afternoon <br/><br/> 
-                    <img src="/images/afternoon.svg"/> </li>
-                    <li>dawn <br/><br/>  </li>
-                    <li>morning <br/><br/>  </li>                    
-                    <li>night <br/><br/>  </li>
+                    <img src={`http://openweathermap.org/img/w/${weatherdata?.weather[0].icon}.png`} alt="imgicon" /></li>
+                    <li>dawn <br/><br/>  
+                    <img src={`http://openweathermap.org/img/w/${weatherdata?.weather[0].icon}.png`} alt="imgicon" /></li>
+                    <li>morning <br/><br/>  
+                    <img src={`http://openweathermap.org/img/w/${weatherdata?.weather[0].icon}.png`} alt="imgicon" /></li>                    
+                    <li>night <br/><br/>  
+                    <img src={`http://openweathermap.org/img/w/${weatherdata?.weather[0].icon}.png`} alt="imgicon" /></li>
                 </ul>
                 
                 <ul className="Values">
