@@ -5,6 +5,23 @@ a:visited{
   text-decoration: none;
 }
 
+.btnHome {
+  height: 5%;
+  width: 5%;
+  left: 0;
+  top: 0;
+}
+
+
+
+.climaImg {
+  width: 25%;
+  height: 25%;
+  margin-top: -80px;
+  max-height: 100px;
+  max-width: 100px;
+}
+
 .Ul li {
     font-size:14px;
     position: relative;
@@ -15,6 +32,8 @@ a:visited{
   text-align: center;
   color: black;  
   font-family:Urbanist;
+  max-height: 80%;
+ max-width: 80%;
 }
 
 
@@ -31,16 +50,16 @@ a:visited{
 }
 
 .temp {
-  font-size:90px;
+  font-size:60px;
   font-family:Urbanist;
   align-items: center;
-  margin-right: 40px;
+  margin-right: 10px;
 }
 
 .celcius {
   font-size:20px;
   font-family:Urbanist;
-  top: -150px;
+  top: -100px;
   left: 40px;
   position: relative;
 }
@@ -48,7 +67,7 @@ a:visited{
 .subTitle{
   font-size:30px;  
   font-family:Urbanist;
-  margin-bottom:-70px;
+  margin-bottom:-50px;
 }
 
 .Values li{

@@ -1,48 +1,93 @@
-import React,{Fragment, useState} from "react";
-import {Route} from 'react-router-dom'
+import React,{Fragment, useState, useEffect} from "react";
+import {Route, Link} from 'react-router-dom'
 import "./pages.css";
+import styled from "styled-components";
+import {getWeatherData} from "../weatherapi.js";
 
 
 
-const api = {
-    key:"",
-    base:"https://api.openweathermap.org/data/2.5/",
-};
+
 
 //Popular esse array com as imagens da pasta Images
-const images = [
-    { id: 1, src: './tds-weatherapi/public/icons/', title: 'foo', description: 'bar' },
-    { id: 2, src: './assets/image02.jpg', title: 'foo', description: 'bar' },
-    { id: 3, src: './assets/image03.jpg', title: 'foo', description: 'bar' },
-    { id: 4, src: './assets/image04.jpg', title: 'foo', description: 'bar' },
-    { id: 5, src: './assets/image05.jpg', title: 'foo', description: 'bar' }];
+const images = [];
+
+const ReturnBtn = styled.button `
+height: 20%;
+max-width: 100px;
+max-height: 100px;
+width: 20%;
+color: black;
+background-color:transparent;
+border-radius: 0px;
+top: 0;
+left: 5%;
+position: absolute;
+background: transparent;
+border: none !important;
+font-size:0;
+`
+
+
 
 
 
 function London(){
+    
+    const[weatherdata,setWeatherData] = useState(null);
+    const [loading, setLoading] = useState(false);
+    const CITY = "London";
+    const MINUTES_TO_INTERVAL = 1
+    const INTERVAL = MINUTES_TO_INTERVAL * 60 * 1000
+    
+    const getData = async () => {
+        try{
+            const {data} = await getWeatherData(CITY);
+            console.log(data)
+            setWeatherData(data)
+            // console.log(data.weather)
+            // console.log(data.weather[0].main)
+            // console.log(data.name)
+        }catch(error){
+            console.log(error.message);
+        }
+    }
+    
+    useEffect(() => {
+        getData();
+        setInterval(() => {
+            getData();
+        }, INTERVAL);
+    }, []);
 
-    const [query, setQuery] = useState('');
-    const [weather, setWeather] = useState({});
-
-    const search = evt => { return}
 
     return(
         <Fragment>
-            
-                <h3 className="title">LONDON</h3>
+                
+                
+
+                <ReturnBtn>
+                <Link className="ReturnBtn" to='/'><img className="climaImg" src="/images/arrowBlack.png" /></Link>
+                </ReturnBtn>
+
+                <h3 className="title"> LONDON</h3>
                 <br/>
-                <p className="subTitle">cloudy</p>
+                <p className="subTitle">{weatherdata?.weather[0].main}</p>
                     <div>
-                        <h1 className="temp">15</h1>
+                        <h1 className="temp">{parseFloat(weatherdata?.main.temp - 273.15).toFixed(0)}</h1>
                         <h3 className="celcius">°C</h3>
-                        
+                         
                     </div>
-                <image src="/icons/perfect-day.svg"/>
+                    <img className="climaImg" src={`http://openweathermap.org/img/w/${weatherdata?.weather[0].icon}.png`} alt="imgicon" />
+                
                 <ul className="Ul">
-                    <li>afternoon <br/><br/> <image src="/icons/afternoon.svg"/> </li>
-                    <li>dawn <br/><br/>  </li>
-                    <li>morning <br/><br/>  </li>                    
-                    <li>night <br/><br/>  </li>
+                    <li>afternoon <br/><br/> 
+                    <img src={`http://openweathermap.org/img/w/${weatherdata?.weather[0].icon}.png`} alt="imgicon" /></li>
+                    <li>dawn <br/><br/>  
+                    <img src={`http://openweathermap.org/img/w/${weatherdata?.weather[0].icon}.png`} alt="imgicon" /></li>
+                    <li>morning <br/><br/>  
+                    <img src={`http://openweathermap.org/img/w/${weatherdata?.weather[0].icon}.png`} alt="imgicon" /></li>                    
+                    <li>night <br/><br/>  
+                    <img src={`http://openweathermap.org/img/w/${weatherdata?.weather[0].icon}.png`} alt="imgicon" /></li>
                 </ul>
                 
                 <ul className="Values">
@@ -60,13 +105,13 @@ function London(){
                 </ul>
                 
                 <ul className="Values">
-                    <li>5,1m/s</li>
-                    <li>5:14am</li>
-                    <li>7:25PM</li>
-                    <li>52%</li>
+                    <li>{parseFloat(weatherdata?.wind.speed).toFixed(1)}m/s</li>
+                    <li>{parseFloat(weatherdata?.sys.sunrise).toFixed(1)}</li>
+                    <li>{parseFloat(weatherdata?.sys.sunset).toFixed(1)}</li>
+                    <li>{parseFloat(weatherdata?.main.humidity).toFixed(1)}%</li>
                 </ul>
-               
-            
+
+                
         </Fragment>
     );
 }
