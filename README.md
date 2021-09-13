@@ -1,4 +1,4 @@
-#Olá, nesse documento vou descrever os passos de maneira resumida o que fiz nesse projeto.#
+# Olá, nesse documento vou descrever os passos de maneira resumida o que fiz nesse projeto.
 Primeiramente defini quais seriam as paginas necessarias e uma vez definidas instalei o React-Router-Dom para configurar as rotas
 Após rotas configuradas usei o styled-components somado as folhas de estilo para definir os padrões das paginas, consegui criar algumas condições para cor de background porém como não consegui editar o texto de forma automatica deixei essa função comentada.
 Uma vez que as rotas e os layouts estavam prontos eu parti para criar as funções que fariam as requisições a API do OpenWeatherMap para solicitar um retorno em Json a cada 10 minutos de forma assincrona, dessa forma as paginas sempre estarão atualizadas.
