@@ -107,10 +107,10 @@ function Dallol(){
                 </ul>
                 
                 <ul className="Values">
-                    <li>5,1m/s</li>
-                    <li>5:14am</li>
-                    <li>7:25PM</li>
-                    <li>52%</li>
+                    <li>{parseFloat(weatherdata?.wind.speed).toFixed(1)}m/s</li>
+                    <li>{parseFloat(weatherdata?.sys.sunrise).toFixed(1)}</li>
+                    <li>{parseFloat(weatherdata?.sys.sunset).toFixed(1)}</li>
+                    <li>{parseFloat(weatherdata?.main.humidity).toFixed(1)}%</li>
                 </ul>
 
                 

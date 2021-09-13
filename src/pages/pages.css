@@ -17,7 +17,7 @@ a:visited{
 .climaImg {
   width: 25%;
   height: 25%;
-  margin-top: -100px;
+  margin-top: -80px;
   max-height: 150px;
   max-width: 150px;
 }
@@ -50,16 +50,16 @@ a:visited{
 }
 
 .temp {
-  font-size:90px;
+  font-size:60px;
   font-family:Urbanist;
   align-items: center;
-  margin-right: 40px;
+  margin-right: 10px;
 }
 
 .celcius {
   font-size:20px;
   font-family:Urbanist;
-  top: -150px;
+  top: -100px;
   left: 40px;
   position: relative;
 }
@@ -67,7 +67,7 @@ a:visited{
 .subTitle{
   font-size:30px;  
   font-family:Urbanist;
-  margin-bottom:-70px;
+  margin-bottom:-50px;
 }
 
 .Values li{

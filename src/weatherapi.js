@@ -14,5 +14,6 @@ export const getWeatherData = async (cityname) => {
  }
 
 
+//'https://api.openweathermap.org/data/2.5/forecast?q'; chamada por dia
 
 }
