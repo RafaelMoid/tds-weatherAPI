@@ -33,17 +33,18 @@ font-size:0;
 
 function Recife(){
     
-    /*
+    /* SERÁ NECESSARIO AUTOMATIZAR A MUDANÇA DE COR
+    DO TEXTO PARA ATIVAR ESSA FUNÇÃO!
     var currentTime = new Date().getHours();
     if (6 <= currentTime && currentTime < 17) {
     
-        
         document.body.style.backgroundColor = "blue";
-        
+    
     
     }else {
     
         document.body.style.backgroundColor = "black";
+        
         
     
     } */
@@ -81,7 +82,7 @@ function Recife(){
                 
 
                 <ReturnBtn>
-                <Link className="ReturnBtn" to='/'><img className="climaImg" src="/images/arrow.png" /></Link>
+                <Link className="ReturnBtn" to='/'><img className="climaImg" src="/images/arrowBlack.png" /></Link>
                 </ReturnBtn>
 
                 <h3 className="title"> RECIFE</h3>
