@@ -7,5 +7,5 @@
 6. Temos também o problema do endpoint que eu usei, percebi agora as 02:01 do domingo que esse endpoint não retorna as informações de diversos horarios, consegui usar o outro endpoints porem ele retornou um array com 40 entradas, não consegui chamar os dados desse array para as variaveis.
 7. Porém consegui requisitar os icones do clima para serem atualizados diramente nas paginas seguindo a ideia dos outros dados.
 
-E caso você esteja lendo isso, gostaria de salientar que estou usando React a apenas 15 dias, e tudo isso que eu fiz aqui ilustra meu desenvolvimento nessas duas semana.
+E caso você esteja lendo isso, gostaria de salientar que **estou usando React a apenas 15 dias**, e tudo isso que eu fiz aqui ilustra meu desenvolvimento nessas duas semana.
 Então *pensa com carinho* por que daqui pra semana que vem eu já vou saber _muito mais_. :)
